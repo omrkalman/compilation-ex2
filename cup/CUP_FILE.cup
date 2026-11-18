@@ -53,7 +53,18 @@ scan with
 /* TERMINALS */
 /*************/
 terminal IF;
+terminal ELSE;
+terminal RETURN;
+terminal CLASS;
+terminal EXTENDS;
+terminal ARRAY;
+terminal NEW;
+terminal NIL;
 terminal EQ;
+terminal LT;
+terminal GT;
+terminal AND;
+terminal OR;
 terminal DOT;
 terminal PLUS;
 terminal MINUS;
@@ -66,14 +77,20 @@ terminal LBRACK;
 terminal RBRACK;
 terminal LBRACE;
 terminal RBRACE;
+terminal COMMA;
 terminal SEMICOLON;
 terminal ASSIGN;
+terminal ERROR;
 
 /*************/
 /* TERMINALS */
 /*************/
 terminal Integer INT;
 terminal String ID;
+terminal STRING;
+terminal TYPE_INT;
+terminal TYPE_STRING;
+terminal TYPE_VOID;
 
 /*****************/
 /* NON TERMINALS */
