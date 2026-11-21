@@ -10,9 +10,9 @@ public class Main
 		Lexer l;
 		Parser p;
 		Symbol s;
-		AstStmtList ast;
+		AstNode ast;
 		FileReader fileReader;
-		PrintWriter fileWriter;
+		PrintWriter fileWriter = null;
 		String inputFileName = argv[0];
 		String outputFileName = argv[1];
 		
@@ -41,7 +41,7 @@ public class Main
 			/***********************************/
 			/* [5] 3 ... 2 ... 1 ... Parse !!! */
 			/***********************************/
-			ast = (AstStmtList) p.parse().value;
+			ast = (AstNode) p.parse().value;
 			
 			/*************************/
 			/* [6] Print the AST ... */
@@ -51,6 +51,7 @@ public class Main
 			/*************************/
 			/* [7] Close output file */
 			/*************************/
+			fileWriter.print("OK");
 			fileWriter.close();
 			
 			/*************************************/
@@ -61,9 +62,11 @@ public class Main
 			     
 		catch (Exception e)
 		{
-			e.printStackTrace();
+			if (fileWriter != null)
+			{
+				fileWriter.print(e.getMessage() != null && e.getMessage().startsWith("ERROR") ? e.getMessage() : "ERROR");
+				fileWriter.close();
+			}
 		}
 	}
 }
-
-
