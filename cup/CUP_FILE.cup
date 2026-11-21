@@ -13,15 +13,10 @@ parser code
 		super(lexer);
 		this.lexer = lexer;
 	}
+	
 	public void report_error(String message, Object info)
 	{
-		System.out.print("ERROR >> ");		
-		System.out.print("[");
-		System.out.print(lexer.getLine());
-		System.out.print(":");
-		System.out.print(lexer.getTokenStartPosition());
-		System.out.print("] ");		
-		System.exit(0);
+    throw new RuntimeException("ERROR(" + lexer.getLine() + ")");
 	}
 :}
 
@@ -193,9 +188,9 @@ var	::=	ID:name								{: RESULT = new AstVarSimple(name);       :}
 	| 	var:v LBRACK exp:e RBRACK			{: RESULT = new AstVarSubscript(v,e);     :}
 	;
 
-stmtList ::= /* empty */ 			{: RESULT = null; :}
-		   	| 	stmt:s stmtList:l 	{: RESULT = new AstStmtList(s, l); :}
-		   	;
+stmtList ::= stmt:s               {: RESULT = new AstStmtList(s, null); :}
+           | stmt:s stmtList:l    {: RESULT = new AstStmtList(s, l); :}
+           ;
 
 stmt ::= 	varDec {: RESULT = null; :}
 		| 	var:v ASSIGN exp:e SEMICOLON 		{: RESULT = new AstStmtAssign(v, e); :}
