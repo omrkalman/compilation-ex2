@@ -161,15 +161,15 @@ varDec ::=	type ID SEMICOLON
 		;
 
 /************* function declarations *************/
-/* function declaration logic: include optional parameters. 
+/* function declaration logic: include optional parameters. */
 funcDec ::= type ID LPAREN parametersOpt RPAREN LBRACE stmtList RBRACE;
 
-/* empty or parameters
+/* empty or parameters */
 parametersOpt ::= 	/* empty */
 				| 	parameters
 				;
 
-/* recursion to allow one or more, separaed by comma
+/* recursion to allow one or more, separaed by comma */
 parameters ::= 	type ID
 			| 	parameters COMMA type ID
 			;
