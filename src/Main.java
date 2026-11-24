@@ -42,25 +42,30 @@ public class Main
 			/* [5] 3 ... 2 ... 1 ... Parse !!! */
 			/***********************************/
 			ast = (AstNode) p.parse().value;
-			
-			/*************************/
-			/* [6] Print the AST ... */
-			/*************************/
-			ast.printMe();
-			
-			/*************************/
-			/* [7] Close output file */
-			/*************************/
+
+			/*****************************************************/
+			/* [6] Parsing succeeded: write the result right away */
+			/*****************************************************/
 			fileWriter.print("OK");
 			fileWriter.close();
-			
-			/*************************************/
-			/* [8] Finalize AST GRAPHIZ DOT file */
-			/*************************************/
-			AstGraphviz.getInstance().finalizeFile();
+			fileWriter = null;
+
+			/**********************************************************/
+			/* [7] Debug-only AST dump (needs ./output/ in the cwd).  */
+			/*     Must never change the result written above.        */
+			/**********************************************************/
+			try
+			{
+				if (ast != null) ast.printMe();
+				AstGraphviz.getInstance().finalizeFile();
+			}
+			catch (Throwable t)
+			{
+				/* ignore: debug output only */
+			}
     	}
 			     
-		catch (Exception e)
+		catch (Throwable e)
 		{
 			if (fileWriter != null)
 			{

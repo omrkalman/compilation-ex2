@@ -27,6 +27,12 @@ scan with
 {:
 	Symbol s;
 	s = lexer.next_token();
+	/* A lexical error is reported as plain ERROR (no line number). Tokens are */
+	/* scanned on demand, so a syntax error earlier in the file still wins.    */
+	if (s.sym == TokenNames.ERROR)
+	{
+		throw new RuntimeException("ERROR");
+	}
 	//System.out.print(s.sym);
 	System.out.print("[");
 	System.out.print(lexer.getLine());
@@ -118,12 +124,9 @@ precedence left ASSIGN;
 precedence left OR;
 precedence left AND;
 precedence left EQ;
-precedence left LT;
-precedence left GT;
-precedence left PLUS;
-precedence left MINUS;
-precedence left TIMES;
-precedence left DIVIDE;
+precedence left LT, GT;
+precedence left PLUS, MINUS;
+precedence left TIMES, DIVIDE;
 precedence left LBRACK;
 precedence left LPAREN;
 precedence left DOT;

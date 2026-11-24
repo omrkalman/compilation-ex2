@@ -55,7 +55,7 @@ OUTPUT   = ${OUTPUT_DIR}/ParseStatus.txt
 # TARGET #
 ##########
 all:
-	clear
+	@true
 	@echo "*****************************"
 	@echo "*                           *"
 	@echo "*                           *"
