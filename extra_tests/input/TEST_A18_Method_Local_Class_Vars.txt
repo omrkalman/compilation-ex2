@@ -1,0 +1,1 @@
+class A { void m() { A other := new A; B b := nil; other.m(); } }

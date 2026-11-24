@@ -1,0 +1,5 @@
+void main()
+{
+    x := a // note
+    / b;
+}

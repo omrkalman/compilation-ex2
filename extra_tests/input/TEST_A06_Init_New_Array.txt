@@ -1,0 +1,1 @@
+IntArr a := new int[10];

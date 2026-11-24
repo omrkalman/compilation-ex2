@@ -1,0 +1,8 @@
+// abc XYZ 019 ()[]{}?!+-*/.; 	 end
+int x;
+/* abc XYZ 019 ()[]{}?!+-*/
+int y;
+/* multi
+	line ? ! + - * / . ; ( ) [ ] { }
+*/
+int z;

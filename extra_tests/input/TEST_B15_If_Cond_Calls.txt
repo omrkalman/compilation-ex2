@@ -1,0 +1,4 @@
+void main()
+{
+    if (o.isEmpty() = 1 or f(x) > 2) { return; }
+}

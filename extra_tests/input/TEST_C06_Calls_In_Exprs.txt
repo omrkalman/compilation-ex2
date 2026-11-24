@@ -1,0 +1,4 @@
+void main()
+{
+    x := f(g(1), h(i(2), j)) + o.m(k) * a.b.c(d[1]);
+}

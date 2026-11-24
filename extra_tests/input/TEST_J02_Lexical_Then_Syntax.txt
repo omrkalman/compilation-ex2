@@ -1,0 +1,4 @@
+int a;
+int b := 007;
+int c;
+int d := ;

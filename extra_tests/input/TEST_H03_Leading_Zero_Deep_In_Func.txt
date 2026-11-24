@@ -1,0 +1,4 @@
+void main()
+{
+    if (a) { while (b) { x := 007; } }
+}

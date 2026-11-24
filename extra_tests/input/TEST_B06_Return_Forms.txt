@@ -1,0 +1,3 @@
+int f() { return 1; }
+void g() { return; }
+int h() { return f() + 1; }

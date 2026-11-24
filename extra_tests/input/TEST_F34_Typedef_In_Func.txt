@@ -1,0 +1,4 @@
+void main()
+{
+    array T = int[];
+}

@@ -1,0 +1,4 @@
+void main()
+{
+    x := new A; a := new int[n * 2]; m := new IntArr[f(3)]; s := new string; o.f := new B; a[1] := new int[2];
+}

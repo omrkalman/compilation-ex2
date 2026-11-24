@@ -1,0 +1,4 @@
+array IntArr = int[];
+array StrArr = string[];
+array NodeArr = Node[];
+array VoidArr = void[];

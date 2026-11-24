@@ -1,0 +1,4 @@
+void main()
+{
+    this.x := 1; super.f(); this.list.head := nil;
+}

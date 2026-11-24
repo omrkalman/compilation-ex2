@@ -1,0 +1,1 @@
+Node make() { Node n := new Node; return n; }

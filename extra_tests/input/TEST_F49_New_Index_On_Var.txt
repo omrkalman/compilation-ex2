@@ -1,0 +1,4 @@
+void main()
+{
+    x := new a[1].b;
+}

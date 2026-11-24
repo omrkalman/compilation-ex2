@@ -1,0 +1,4 @@
+/* fine
+fine
+not fine # here */
+int x;

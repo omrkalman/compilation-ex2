@@ -1,0 +1,4 @@
+void main()
+{
+    f(); f(1); f(1, "s", nil); o.m(); o.a.b[1].m(x); printInt(f(g(h())));
+}

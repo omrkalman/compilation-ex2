@@ -1,0 +1,4 @@
+void main()
+{
+    while ((i < n) and (a[i] = 0 or o.ok(i))) { i := i + 1; }
+}

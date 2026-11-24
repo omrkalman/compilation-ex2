@@ -1,0 +1,4 @@
+# test inputs must keep their exact bytes (CRLF / CR-only line-ending tests)
+extra_tests/input/** -text
+extra_tests/expected_output/** -text
+*.sh text eol=lf

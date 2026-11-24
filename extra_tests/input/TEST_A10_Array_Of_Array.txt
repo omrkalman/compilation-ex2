@@ -1,0 +1,2 @@
+array IntArr = int[];
+array Matrix = IntArr[];

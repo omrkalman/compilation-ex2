@@ -1,0 +1,4 @@
+void main()
+{
+    x := a + b; x := a - b; x := a * b; x := a / b; x := a < b; x := a > b; x := a = b; x := a and b; x := a or b;
+}

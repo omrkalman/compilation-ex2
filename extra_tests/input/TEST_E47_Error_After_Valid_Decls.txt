@@ -1,0 +1,5 @@
+int a;
+int b := 2;
+class C { int c; }
+void f() { return; }
+int e := 5 5;

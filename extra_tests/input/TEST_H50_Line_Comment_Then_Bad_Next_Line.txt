@@ -1,0 +1,2 @@
+int x; // fine
+int y := 1 #

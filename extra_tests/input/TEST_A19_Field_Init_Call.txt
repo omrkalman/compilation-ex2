@@ -1,0 +1,1 @@
+class A { int x := f(1); int y := o.m(2, 3); }

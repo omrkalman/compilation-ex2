@@ -1,0 +1,4 @@
+void main()
+{
+    Node n; n := nil; Node m := n;
+}

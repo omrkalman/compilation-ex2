@@ -1,0 +1,6 @@
+array IntArr = int[];
+class List { int head; List tail; }
+int g := 7;
+void main() { List l := new List; l.head := g; }
+class Pair { int a; int b; }
+string name := "end";

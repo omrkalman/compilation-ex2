@@ -1,0 +1,12 @@
+class Shape
+{
+    int sides := 0;
+    string name := "shape";
+    int area() { return 0; }
+}
+class Square extends Shape
+{
+    int len;
+    int area() { return len * len; }
+    void setLen(int l) { len := l; }
+}

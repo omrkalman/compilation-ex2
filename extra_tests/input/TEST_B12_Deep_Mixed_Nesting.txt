@@ -1,0 +1,4 @@
+void main()
+{
+    if (a) { while (b) { if (c) { while (d) { if (e) { while (f) { if (g) { while (h) { if (i) { x := 1; } } } } } } } } }
+}

@@ -1,0 +1,4 @@
+void main()
+{
+    int x; int y := 1; A a := new A; IntArr arr := new int[3]; string s := "t"; A b := nil;
+}

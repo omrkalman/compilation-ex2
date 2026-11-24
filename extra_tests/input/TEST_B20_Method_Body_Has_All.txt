@@ -1,0 +1,10 @@
+class A
+{
+    int v;
+    int run(int n)
+    {
+        int i := 0;
+        while (i < n) { if (i = 3) { return i; } else { v := v + i; } i := i + 1; }
+        return v;
+    }
+}

@@ -1,0 +1,4 @@
+void main()
+{
+    x := nil = y; s := "a" + "b"; f(nil, "", "abc"); x := "s" = nil;
+}
